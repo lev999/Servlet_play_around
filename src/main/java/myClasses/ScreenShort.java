@@ -71,7 +71,13 @@ public class ScreenShort extends JFrame implements ActionListener {
 		if (clickedButton == button1) {
 			// capture the button
 			captureComponent(button1);
-			
+			SendFiles sendFiles = new SendFiles();
+			try {
+				sendFiles.sendFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		} else if (clickedButton == button2) {
 			// capture the frame
 			captureComponent(this);
