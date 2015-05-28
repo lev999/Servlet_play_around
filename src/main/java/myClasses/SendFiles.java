@@ -25,7 +25,7 @@ public class SendFiles {
 
 		// takes file path from first program's argument
 		String filePath = Paths.get("").toAbsolutePath().toString()
-				+ "\\send\\send_file.txt";
+				+ "\\send\\send_file.png";
 		File uploadFile = new File(filePath);
 
 		System.out.println("File to upload: " + filePath);
