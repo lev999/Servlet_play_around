@@ -68,6 +68,6 @@ public class Upload extends HttpServlet {
 		System.out.println("File written to: " + saveFile.getAbsolutePath());
 
 		// sends response to client
-		response.getWriter().print("UPLOAD DONE");
+		response.getWriter().print("UPLOAD DONE. folder:"+SAVE_DIR);
 	}
 }

@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,8 +17,15 @@ public class SendFiles {
 	static final int BUFFER_SIZE = 4096;
 
 	public static void main(String[] args) throws IOException {
+
+		(new SendFiles()).sendFile();
+	}
+
+	  void sendFile() throws IOException {
+
 		// takes file path from first program's argument
-		String filePath = Paths.get("").toAbsolutePath().toString()+"\\send\\send_file.txt";
+		String filePath = Paths.get("").toAbsolutePath().toString()
+				+ "\\send\\send_file.txt";
 		File uploadFile = new File(filePath);
 
 		System.out.println("File to upload: " + filePath);
@@ -62,6 +70,5 @@ public class SendFiles {
 			System.out.println("Server returned non-OK code: " + responseCode);
 		}
 	}
-
 
 }
