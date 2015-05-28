@@ -32,7 +32,7 @@ public class ScreenShort extends JFrame implements ActionListener {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JButton button1 = new JButton("Capture Me!");
-	private JButton button2 = new JButton("Capture This Frame!");
+//	private JButton button2 = new JButton("Capture This Frame!");
 
 	public ScreenShort() {
 		super("Component GUI Capture Demo");
@@ -41,11 +41,11 @@ public class ScreenShort extends JFrame implements ActionListener {
 		button1.setName("button1");
 		button1.addActionListener(this);
 
-		button2.setName("button2");
-		button2.addActionListener(this);
+//		button2.setName("button2");
+//		button2.addActionListener(this);
 
 		add(button1);
-		add(button2);
+//		add(button2);
 
 		setSize(400, 120);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -87,15 +87,16 @@ public class ScreenShort extends JFrame implements ActionListener {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		} else if (clickedButton == button2) {
-			// capture the frame
-			try {
-				captureComponent(this);
-			} catch (AWTException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
+//		else if (clickedButton == button2) {
+//			// capture the frame
+//			try {
+//				captureComponent(this);
+//			} catch (AWTException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
 	}
 
 	public static void main(String[] args) {
