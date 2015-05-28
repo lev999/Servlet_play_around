@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class Upload extends HttpServlet {
-	static final String SAVE_DIR = Paths.get("").toAbsolutePath().toString();
+	static final String SAVE_DIR = Paths.get("").toAbsolutePath().toString()+"\\";
 	static final int BUFFER_SIZE = 4096;
 
 	@Override
